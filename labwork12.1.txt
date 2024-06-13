@@ -1,0 +1,232 @@
+﻿Q.1 Write a Program to create a Student Record System for 3 students using structure. Consider the below-mentioned attributes in the Student structure:
+- stu_id
+- stu_name
+- stu_age
+- stu_course
+- stu_city
+- stu_standard
+- stu_school
+Ans: #include <stdio.h>
+#include <string.h>
+struct Student {
+    int stu_id;
+    char stu_name[100];
+    int stu_age;
+    char stu_course[100];
+    char stu_city[100];
+    int stu_standard;
+    char stu_school[100];
+};
+
+
+int main() {
+    struct Student students[4];
+    for(int i = 1; i < 4; i++) {
+        printf("\nEnter record for student %d:\n", i);
+        printf("Enter student ID: ");
+        scanf("%d", &students[i].stu_id);
+        printf("Enter student name: ");
+        scanf("\n%s", students[i].stu_name);
+        printf("Enter student age: ");
+        scanf("\n%d", &students[i].stu_age);
+        printf("Enter student course: ");
+        scanf("\n%s", students[i].stu_course);
+        printf("Enter student city: ");
+        scanf("\n%s", students[i].stu_city);
+        printf("Enter student standard: ");
+        scanf("\n%d", &students[i].stu_standard);
+        printf("Enter student school: ");
+        scanf("\n%s", students[i].stu_school);
+    }
+    printf("\nStudent Records:\n");
+    for(int i = 1; i < 4; i++) {
+        printf("\nStudent %d:\n", i);
+        printf("Student ID: %d\n", students[i].stu_id);
+        printf("Student Name: %s\n", students[i].stu_name);
+        printf("Student Age: %d\n", students[i].stu_age);
+        printf("Student Course: %s\n", students[i].stu_course);
+        printf("Student City: %s\n", students[i].stu_city);
+        printf("Student Standard: %d\n", students[i].stu_standard);
+        printf("Student School: %s\n", students[i].stu_school);
+    }
+
+
+    return 0;
+}
+O\p: /tmp/Iiy9EjvTto.o
+
+
+Enter record for student 1:
+Enter student ID: 8484
+Enter student name: pankaj
+Enter student age: 15
+Enter student course: arts
+Enter student city: ahemdabad
+Enter student standard: 11
+Enter student school: glsschool
+
+
+Enter record for student 2:
+Enter student ID: 4893
+Enter student name: vaibhav
+Enter student age: 16
+Enter student course: commarce
+Enter student city: ahemdabad
+Enter student standard: 12
+Enter student school: nirmaschool
+
+
+Enter record for student 3:
+Enter student ID: 4843
+Enter student name: rajesh
+Enter student age: 16
+Enter student course: science
+Enter student city: deesa
+Enter student standard: 12
+Enter student school: adarshschool
+Student Records:
+
+
+Student 1:
+Student ID: 8484
+Student Name: pankaj
+Student Age: 15
+Student Course: arts
+Student City: ahemdabad
+Student Standard: 11
+Student School: glsschool
+
+
+Student 2:
+Student ID: 4893
+Student Name: vaibhav
+Student Age: 16
+Student Course: commarce
+Student City: ahemdabad
+Student Standard: 12
+Student School: nirmaschool
+
+
+Student 3:
+Student ID: 4843
+Student Name: rajesh
+Student Age: 16
+Student Course: science
+Student City: deesa
+Student Standard: 12
+Student School: adarshschool
+
+
+
+
+=== Code Execution Successful ===
+Q.2 Write a Program to create an Employee Record System with an Array of objects for a given N number of employees using structure. Consider the below-mentioned attributes in the Employee structure:
+- emp_id
+- emp_name
+- emp_age
+- emp_role
+- emp_city
+- emp_experience
+- emp_company_name
+Ans: #include <stdio.h>
+#include <string.h>
+struct Employee {
+    int emp_id;
+    char emp_name[100];
+    int emp_age;
+    char emp_role[100];
+    char emp_city[100];
+    float emp_experience;
+    char emp_company_name[100];
+};
+
+
+int main() {
+    int n;
+    printf("Enter the number of employees: ");
+    scanf("%d", &n);
+    struct Employee member[n];
+
+
+    for(int i = 1; i <= n; i++) {
+        printf("\nEnter record for employee %d:\n", i);
+        printf("Enter employee ID: ");
+        scanf("%d", &member[i].emp_id);
+        printf("Enter employee name: ");
+        scanf("%s", member[i].emp_name);
+        printf("Enter employee age: ");
+        scanf("%d", &member[i].emp_age);
+        printf("Enter employee role: ");
+        scanf("%s", member[i].emp_role);
+        printf("Enter employee city: ");
+        scanf("%s", member[i].emp_city);
+        printf("Enter employee experience: ");
+        scanf("%f", &member[i].emp_experience);
+        printf("Enter employee company name: ");
+        scanf("%s", member[i].emp_company_name);
+    }
+    printf("\nEmployee Records:\n");
+    for(int i = 1; i <= n; i++) {
+        printf("\nEmployee %d:\n", i);
+        printf("Employee ID: %d\n", member[i].emp_id);
+        printf("Employee Name: %s\n", member[i].emp_name);
+        printf("Employee Age: %d\n", member[i].emp_age);
+        printf("Employee Role: %s\n", member[i].emp_role);
+        printf("Employee City: %s\n", member[i].emp_city);
+        printf("Employee Experience: %.2f\n", member[i].emp_experience);
+        printf("Employee Company Name: %s\n", member[i].emp_company_name);
+    }
+
+
+    return 0;
+}
+O\p: /tmp/pasG9ypuzc.o
+Enter the number of employees: 2
+
+
+Enter record for employee 1:
+Enter employee ID: 647899
+Enter employee name: radhika
+Enter employee age: 22
+Enter employee role: 234
+Enter employee city: ahemdabad
+Enter employee experience: 2
+Enter employee company name: bharatsilk.ltd
+
+
+Enter record for employee 2:
+Enter employee ID: 789409
+Enter employee name: kartik
+Enter employee age: 23
+Enter employee role: 374
+Enter employee city: ahemdabad
+Enter employee experience: 4
+Enter employee company name: gk.ltd
+
+
+Employee Records:
+
+
+Employee 1:
+Employee ID: 647899
+Employee Name: radhika
+Employee Age: 22
+Employee Role: 234
+Employee City: ahemdabad
+Employee Experience: 2.00
+Employee Company Name: bharatsilk.ltd
+
+
+Employee 2:
+Employee ID: 789409
+Employee Name: kartik
+Employee Age: 23
+Employee Role: 374
+Employee City: ahemdabad
+Employee Experience: 4.00
+Employee Company Name: gk.ltd
+
+
+
+
+=== Code Execution Successful ===
